@@ -73,7 +73,7 @@ test("keep the `more` popover active when hovering it", async () => {
     await contains(enterFullScreenSelector);
 });
 
-test("no call with odoobot", async () => {
+test("no call with bot", async () => {
     const pyEnv = await startServer();
     const channelId = pyEnv["discuss.channel"].create({
         channel_member_ids: [
@@ -523,7 +523,7 @@ test("should also invite to the call when inviting to the channel", async () => 
     mockGetMedia();
     const pyEnv = await startServer();
     const partnerId = pyEnv["res.partner"].create({
-        email: "testpartner@odoo.com",
+        email: "testpartner@gmail.com",
         name: "TestPartner",
     });
     pyEnv["res.users"].create({ partner_id: partnerId });
