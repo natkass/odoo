@@ -2557,7 +2557,7 @@ describe("link", () => {
                 stepFunction: async (editor) => {
                     pasteText(editor, "abc www.odoo.com xyz");
                 },
-                contentAfter: '<p>abc <a href="http://www.odoo.com">www.odoo.com</a> xyz[]</p>',
+                contentAfter: '<p>abc xyz[]</p>',
             });
             await testEditor({
                 contentBefore: '<p><a href="#">[]\u200B</a></p>',

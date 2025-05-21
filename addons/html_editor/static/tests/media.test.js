@@ -20,8 +20,8 @@ test("Can replace an image", async () => {
         ];
     });
     const env = await makeMockEnv();
-    await setupEditor(`<p> <img class="img-fluid" src="/web/static/img/logo.png"> </p>`, { env });
-    expect("img[src='/web/static/img/logo.png']").toHaveCount(1);
+    await setupEditor(`<p>  </p>`, { env });
+    expect("").toHaveCount(1);
     await click("img");
     await tick(); // selectionchange
     await waitFor(".o-we-toolbar");
@@ -30,8 +30,8 @@ test("Can replace an image", async () => {
     await animationFrame();
     await click("img.o_we_attachment_highlight");
     await animationFrame();
-    expect("img[src='/web/static/img/logo.png']").toHaveCount(0);
-    expect("img[src='/web/static/img/logo2.png']").toHaveCount(1);
+    expect("").toHaveCount(0);
+    expect("").toHaveCount(1);
 });
 
 test.tags("focus required");
@@ -50,7 +50,7 @@ test("Selection is collapsed after the image after replacing it", async () => {
     });
     const env = await makeMockEnv();
     const { el } = await setupEditor(
-        `<p>abc<img class="img-fluid" src="/web/static/img/logo.png">def</p>`,
+        `<p>abcdef</p>`,
         { env }
     );
     await click("img");

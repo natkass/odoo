@@ -781,7 +781,7 @@ Soup
 Odoo S.A.
 Chaussée de Namur, 40
 B-1367 Grand Rosière
-Web: <a class="moz-txt-link-freetext" href="http://www.odoo.com">http://www.odoo.com</a> </pre>
+Web: </pre>
   </body>
 </html>
 

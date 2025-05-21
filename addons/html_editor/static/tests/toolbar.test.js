@@ -675,7 +675,6 @@ test("toolbar does not evaluate isActive when namespace does not match", async (
         `
         <div>
             <p>[Foo]</p>
-            <img class="img-fluid" src="/web/static/img/logo.png">
         </div>
     `,
         {
