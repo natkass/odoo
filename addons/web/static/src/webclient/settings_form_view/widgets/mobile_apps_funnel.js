@@ -1,5 +1,4 @@
 import { registry } from "@web/core/registry";
-
 import { Component } from "@odoo/owl";
 import { isMobileOS } from "@web/core/browser/feature_detection";
 import { Setting } from "@web/views/form/setting/setting";
@@ -18,11 +17,11 @@ class MobileAppsFunnel extends Component {
     static props = { ...standardWidgetProps };
     setup() {
         this.iosAppstoreImagePath = isMobileOS()
-            ? "/web/static/img/app_store.png"
-            : "/web/static/img/mobile_app_qrcode_ios.svg";
+            ? ""
+            : "";
         this.androidAppstoreImagePath = isMobileOS()
-            ? "/web/static/img/google_play.png"
-            : "/web/static/img/mobile_app_qrcode_android.svg";
+            ? ""
+            : "";
     }
 }
 
